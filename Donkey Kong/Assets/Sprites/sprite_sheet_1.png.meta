@@ -377,7 +377,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprite_sheet_1_13
+      name: mario_jump
       rect:
         serializedVersion: 2
         x: 376
@@ -3080,20 +3080,19 @@ TextureImporter:
       sprite_sheet_1_29: -1182766560
       sprite_sheet_1_143: -627276520
       sprite_sheet_1_76: 1586914346
-      sprite_sheet_1_13: 1139418101
       sprite_sheet_1_152: -1518205388
       sprite_sheet_1_134: 1582350006
       sprite_sheet_1_93: -512688229
       sprite_sheet_1_58: -1519894409
       sprite_sheet_1_98: -2143225356
-      sprite_sheet_1_97: 232709039
+      sprite_sheet_1_113: -52918389
       sprite_sheet_1_44: 1126149535
       sprite_sheet_1_49: 399379731
       sprite_sheet_1_14: -373939296
       mario_run_2: 618421158
       sprite_sheet_1_121: 1753314921
       sprite_sheet_1_51: -350338837
-      sprite_sheet_1_113: -52918389
+      sprite_sheet_1_97: 232709039
       sprite_sheet_1_57: 1463205045
       sprite_sheet_1_96: -1199107289
       sprite_sheet_1_55: -682897368
@@ -3155,6 +3154,7 @@ TextureImporter:
       sprite_sheet_1_28: -1665507854
       sprite_sheet_1_80: -1503389044
       sprite_sheet_1_124: 781850524
+      mario_jump: 1139418101
       sprite_sheet_1_129: 1493680115
       donkey_barrel_1: 1632949013
       sprite_sheet_1_86: -909287636
