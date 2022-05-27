@@ -6,12 +6,13 @@ public class LadderController : PlayerController
 {
     // Logic :: If touching ground/no longer climbing then stop climbing
     private float verticalAxis = 0f;
-    private float ladderSpeed = 8f;
+    private float ladderSpeed = 0.5f;
     private bool touchingLadder;
     private bool climbingLadder;
     private bool ladderBelow;
-    private float stickyX;
+    private float ladderCenterX;
     private Rigidbody2D rb2;
+    private GameObject ladderObj;
 
     void Awake()
     {
@@ -32,10 +33,12 @@ public class LadderController : PlayerController
     void CheckLadder()
     {
         verticalAxis = Input.GetAxisRaw("Vertical"); // -1, 0 or 1
-        
-        if(touchingLadder && Mathf.Abs(verticalAxis) > 0f)
+       
+        if(touchingLadder)
         {
-            climbingLadder = true;
+            ladderBelow = ladderObj.transform.position.y < transform.position.y;
+            if (verticalAxis > 0f && !ladderBelow) { climbingLadder = true; } 
+            else if (verticalAxis < 0f && ladderBelow){ climbingLadder = true; }
         }
     }
 
@@ -43,32 +46,25 @@ public class LadderController : PlayerController
     {
         if(climbingLadder)
         {
+            rb2.velocity = Vector2.zero;
             rb2.gravityScale = 0f;
-            float newSpeed = ladderSpeed * Time.fixedDeltaTime;
-            transform.position = new Vector3(stickyX, transform.position.y);
-            rb2.velocity = new Vector2(0f, verticalAxis * newSpeed);
+            rb2.isKinematic = true;
+            transform.position = new Vector3(ladderCenterX, transform.position.y + (ladderSpeed * verticalAxis * Time.fixedDeltaTime));
             climbingLadder = !CheckGround();
-
         } 
         else
         {
+            rb2.isKinematic = false;
             rb2.gravityScale = 0.7f; // default gravity scale for mario
         }
     }
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.CompareTag("Ladder"))
+        if(collision.CompareTag("Ladder") && CheckGround())
         {
-            stickyX = collision.gameObject.transform.position.x;
-            if (collision.gameObject.transform.position.y < transform.position.y)
-            {
-                ladderBelow = true;
-            } 
-            else
-            {
-                ladderBelow = false;
-            }
+            ladderObj = collision.gameObject;
+            ladderCenterX = ladderObj.transform.position.x;
             touchingLadder = true;
         }
     }

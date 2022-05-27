@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
 
     // Basic Components
     private Rigidbody2D rb;
-    private Animator animator;
+    public Animator animator;
     private SpriteRenderer spriteRenderer;
 
     // Used to track which way the player should go
@@ -35,6 +35,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        Debug.Log(CheckGround());
         // Check the speed the player should be at
         CalculateHorizontalSpeed();
         // Allow player to jump

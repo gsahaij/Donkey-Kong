@@ -167,12 +167,12 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprite_sheet_1_3
+      name: mario_climb_1
       rect:
         serializedVersion: 2
-        x: 138
+        x: 137
         y: 127
-        width: 13
+        width: 15
         height: 16
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -3001,6 +3001,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: mario_climb_2
+      rect:
+        serializedVersion: 2
+        x: 855
+        y: 102
+        width: 15
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 421a4c7851bcddf469734a54f5b0089a
+      internalID: 1147122624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -3111,7 +3132,6 @@ TextureImporter:
       sprite_sheet_1_100: -999498658
       sprite_sheet_1_94: 750144166
       sprite_sheet_1_127: 2042617322
-      sprite_sheet_1_3: -1367206867
       sprite_sheet_1_79: 955536683
       sprite_sheet_1_148: 1344758668
       sprite_sheet_1_17: -134575227
@@ -3143,6 +3163,7 @@ TextureImporter:
       sprite_sheet_1_63: 926421151
       sprite_sheet_1_42: -323821942
       sprite_sheet_1_101: -1367895409
+      mario_climb_1: -1367206867
       mario_run_3: 700477375
       sprite_sheet_1_10: 1234835845
       sprite_sheet_1_78: 396819035
@@ -3162,6 +3183,7 @@ TextureImporter:
       sprite_sheet_1_105: -1496514405
       donkey_chest_2: -1928986989
       sprite_sheet_1_23: -1850383216
+      mario_climb_2: 1147122624
       sprite_sheet_1_115: 1000114746
       donkey_barrel_2: -962708679
       sprite_sheet_1_140: -374099514
