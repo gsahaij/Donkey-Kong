@@ -76,7 +76,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    bool CheckGround()
+    public bool CheckGround()
     {
         // Using Layers to Linecast from the player's position to the ground check's position to see if there is a layer called Ground
         // Three checks are used for precision
